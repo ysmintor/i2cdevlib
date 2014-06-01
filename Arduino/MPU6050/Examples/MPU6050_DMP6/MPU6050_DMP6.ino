@@ -309,7 +309,7 @@ void loop() {
         #endif
 
         #ifdef OUTPUT_READABLE_YAWPITCHROLL
-            // display Euler angles in degrees
+            // display yaw/pitch/roll angles (in degrees) in degrees
             mpu.dmpGetQuaternion(&q, fifoBuffer);
             mpu.dmpGetGravity(&gravity, &q);
             mpu.dmpGetYawPitchRoll(ypr, &q, &gravity);
